@@ -1,40 +1,28 @@
-/* global styles */
-
-img {
-    max-width: 100%;
-}
-
-/* reusable classes*/
-.wrapper {
-    max-width: 1920px;
-}
-
-header {
-    height: 100vh;
-}
-
 .chosenDevice {
-            height: 722px;
-            width: 1000px;
-            position: relative;
-            background-image: url(../images/macbook-mockup.png);
-        }
+  height: 722px;
+  width: 1000px;
+  position: relative;
+  background-image: url(../images/macbook-mockup.png); }
 
-        .deviceBackground {
-            position: absolute;
-            top: 50px;
-            left: 100px;
-            z-index: -1;
-            height: 700px;
-            width: 900px;
-            /* background-image: url(../images/leaf.jpeg); */
-            background-position: center center;
-            background-size: cover;
-        }
+.deviceBackground {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: -1;
+  height: 700px;
+  width: 900px;
+  /* background-image: url(../images/leaf.jpeg); */
+  background-position: center center;
+  background-size: cover; }
 
-        .headerText {
-            text-align: center;
-            line-height: 700px;
-            z-index: 2;
-        }
+.headerText {
+  text-align: center;
+  line-height: 700px;
+  z-index: 2; }
 
+body {
+  background: #cbcbcb; }
+  body .wrapper {
+    max-width: 1920px; }
+  body img {
+    max-width: 100%; }
