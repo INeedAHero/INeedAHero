@@ -159,11 +159,18 @@ header {
 
 .inputs-container {
   display: grid;
-  grid-gap: 3%; }
+  grid-gap: 3%;
+  grid-template-columns: 1fr 1fr 1fr 1fr; }
+  @media (max-width: 1000px) {
+    .inputs-container {
+      grid-template-columns: 2fr 2fr;
+      grid-template-rows: 2fr 2fr;
+      grid-row-gap: 10%; } }
 
 body {
   background: #cbcbcb; }
   body .wrapper {
-    max-width: 1920px; }
+    max-width: 1920px;
+    margin: 0 auto; }
   body img {
     max-width: 100%; }

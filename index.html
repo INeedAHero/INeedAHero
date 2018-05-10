@@ -35,44 +35,41 @@
         <!-- <div class="headerText">
         <h1>User Header</h1>
     </div> -->
-        <section class="inputs-container">
+        <section class="inputs-container ">
             <!-- choose a colour for the header -->
-            <form class="colourForm" action="">
-                <input type="color">
-                <input class="submitColourForm" type="submit">
-            </form>
-        
-            <!-- choose a font style -->
-            <form class="chooseFontStyle" action="">
-                <label for="font">Choose your font style</label>
-                <select name="font" id="fontChoice">
-                    <option value="serif">Serif</option>
-                    <option value="sans-serif">Sans-Serif</option>
-                    <option value="display">Display</option>
-                    <option value="handwriting">Handwriting</option>
-                    <option value="monospace">Monospace</option>
-                </select>
-            </form>
-            <button class="shuffleFont">Shuffle Font</button>
-        
-            <form class="userText" action="">
-                <input type="text" placeholder="Your header here">
-                <input type="submit" value="change header">
-            </form>
-        
-            <div class="finalChoices">
-                <h2>User Results</h2>
-                <ul>
-                    <li class="finalFont"></li>
-                    <!-- leave space between li so that the 'user results'are blank upon page load -->
-                    <li class="finalTextColour"> </li>
-                    <li class="finalBackgroundImage"> </li>
-        
-                </ul>
+            <div class="colour-form-container">
+                <h3>Choose Your Colour</h3>
+                <form class="colourForm" action="">
+                    <input type="color">
+                    <input class="submitColourForm" type="submit" value="Select Colour">
+                </form>
             </div>
         
+            <!-- choose a font style -->
+            <div class="font-family-container">
+                <h3>Choose Your Font-Family</h3>
+                <form class="chooseFontStyle" action="">
+                    <label for="font">Choose your font style</label>
+                    <select name="font" id="fontChoice">
+                        <option value="serif">Serif</option>
+                        <option value="sans-serif">Sans-Serif</option>
+                        <option value="display">Display</option>
+                        <option value="handwriting">Handwriting</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                </form>
+                <button class="shuffleFont">Shuffle Font</button>
+            </div>
+            <div class="user-text-container">
+                <h3>Input Some Hero Text</h3>                
+                <form class="userText" action="">
+                    <input type="text" placeholder="Your header here">
+                    <input type="submit" value="change header">
+                </form>
+            </div>
             <!-- carolines form -->
             <div class="background-input">
+                <h3>Randomize Your Hero Background</h3>
                 <form action="">
                     <label for="imageTags">What category of image do you want?</label>
                     <select name="pixabayTags" id="pixabayTags">
@@ -85,6 +82,18 @@
                     </select>
                     <button class="submitImage">Change</button>
                 </form>
+            </div>   
+        </section> <!-- /.inputs-container -->
+        <section class="output-choices-container">
+            <div class="finalChoices">
+                <h2>User Results</h2>
+                <ul>
+                    <li class="finalFont"></li>
+                    <!-- leave space between li so that the 'user results'are blank upon page load -->
+                    <li class="finalTextColour"> </li>
+                    <li class="finalBackgroundImage"> </li>
+        
+                </ul>
             </div>
         </section>
     </main>

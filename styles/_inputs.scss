@@ -1,4 +1,10 @@
 .inputs-container {
     display: grid;
     grid-gap: 3%;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    @media (max-width: 1000px) {
+        grid-template-columns: 2fr 2fr;
+        grid-template-rows: 2fr 2fr;
+        grid-row-gap: 10%;
+    }
 }
