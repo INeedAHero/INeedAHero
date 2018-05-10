@@ -1,0 +1,18 @@
+@import 'utils';
+@import 'typography';
+@import 'header';
+@import 'results';
+@import 'inputs';
+@import 'footer';
+
+//GLOBAL STYLES
+
+body {
+    background: $bodyBG;
+    .wrapper {
+        max-width: 1920px;    
+    }
+    img {
+    max-width: 100%;
+}
+}
