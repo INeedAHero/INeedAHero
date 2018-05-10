@@ -8,17 +8,39 @@
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
-    <header>
+    <header class="wrapper">
+        <div class="headerImage">
+            <img src="images/macbook-mockup.gif" alt="">
+        </div>
 
     </header>
-    <main>
-        <h1>Header Here</h1>
-        
+    <main class="wrapper">
+        <form class="chooseDevice" action="">
+            <label for="font">Choose device</label>
+            <select name="device" id="deviceChoice">
+                <option value="desktop">Desktop</option>
+                <option value="tablet">Tablet</option>
+                <option value="mobile">Mobile</option>
+            </select>
+        </form>
+            <div class="chosenDevice">
+                <div class="headerText">
+                    <h1>User Header</h1>
+                </div>
+            </div>
+            <div class="deviceBackground">
+            </div>
+    
+        <!-- <div class="headerText">
+        <h1>User Header</h1>
+    </div> -->
+        <!-- choose a colour for the header -->
         <form class="colourForm" action="">
             <input type="color">
             <input class="submitColourForm" type="submit">
         </form>
-        
+    
+        <!-- choose a font style -->
         <form class="chooseFontStyle" action="">
             <label for="font">Choose your font style</label>
             <select name="font" id="fontChoice">
@@ -29,18 +51,45 @@
                 <option value="monospace">Monospace</option>
             </select>
         </form>
-        <button>Change</button>
-        
+        <button class="shuffleFont">Shuffle Font</button>
+    
         <form class="userText" action="">
             <input type="text" placeholder="Your header here">
             <input type="submit" value="change header">
         </form>
-        
+    
+        <div class="finalChoices">
+            <h2>User Results</h2>
+            <ul>
+                <li class="finalFont"></li>
+                <!-- leave space between li so that the 'user results'are blank upon page load -->
+                <li class="finalTextColour"> </li>
+                <li class="finalBackgroundImage"> </li>
+    
+            </ul>
+        </div>
+    
+        <!-- carolines form -->
+    
+        <form action="">
+            <label for="imageTags">What category of image do you want?</label>
+            <select name="pixabayTags" id="pixabayTags">
+                <option value="nature">Nature</option>
+                <option value="animals">Animals</option>
+                <option value="textures">Textures</option>
+                <option value="landscapes">Landscapes</option>
+                <option value="food">Food</option>
+                <option value="abstract">Abstract</option>
+            </select>
+        </form>
+        <button class="submitImage">Change</button>
+        <div class="heroArt"></div>
     </main>
-    <footer>
-
+    <footer class="wrapper">
+    
     </footer>
-    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='crossorigin='anonymous'></script>
+    <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
+        crossorigin='anonymous'></script>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
