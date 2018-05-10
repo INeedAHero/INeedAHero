@@ -46,57 +46,60 @@
         <!-- <div class="headerText">
         <h1>User Header</h1>
     </div> -->
-        <!-- choose a colour for the header -->
-        <form class="colourForm" action="">
-            <input type="color">
-            <input class="submitColourForm" type="submit">
-        </form>
-    
-        <!-- choose a font style -->
-        <form class="chooseFontStyle" action="">
-            <label for="font">Choose your font style</label>
-            <select name="font" id="fontChoice">
-                <option value="serif">Serif</option>
-                <option value="sans-serif">Sans-Serif</option>
-                <option value="display">Display</option>
-                <option value="handwriting">Handwriting</option>
-                <option value="monospace">Monospace</option>
-            </select>
-        </form>
-        <button class="shuffleFont">Shuffle Font</button>
-    
-        <form class="userText" action="">
-            <input type="text" placeholder="Your header here">
-            <input type="submit" value="change header">
-        </form>
-    
-        <div class="finalChoices">
-            <h2>User Results</h2>
-            <ul>
-                <li class="finalFont"></li>
-                <!-- leave space between li so that the 'user results'are blank upon page load -->
-                <li class="finalTextColour"> </li>
-                <li class="finalBackgroundImage"> </li>
-    
-            </ul>
-        </div>
-    
-        <!-- carolines form -->
-    
-        <form action="">
-            <label for="imageTags">What category of image do you want?</label>
-            <select name="pixabayTags" id="pixabayTags">
-                <option value="nature">Nature</option>
-                <option value="animals">Animals</option>
-                <option value="textures">Textures</option>
-                <option value="landscapes">Landscapes</option>
-                <option value="food">Food</option>
-                <option value="abstract">Abstract</option>
-            </select>
-        </form>
-        <button class="submitImage">Change</button>
-        <div class="heroArt"></div>
+        <section class="inputs-container">
+            <!-- choose a colour for the header -->
+            <form class="colourForm" action="">
+                <input type="color">
+                <input class="submitColourForm" type="submit">
+            </form>
+        
+            <!-- choose a font style -->
+            <form class="chooseFontStyle" action="">
+                <label for="font">Choose your font style</label>
+                <select name="font" id="fontChoice">
+                    <option value="serif">Serif</option>
+                    <option value="sans-serif">Sans-Serif</option>
+                    <option value="display">Display</option>
+                    <option value="handwriting">Handwriting</option>
+                    <option value="monospace">Monospace</option>
+                </select>
+            </form>
+            <button class="shuffleFont">Shuffle Font</button>
+        
+            <form class="userText" action="">
+                <input type="text" placeholder="Your header here">
+                <input type="submit" value="change header">
+            </form>
+        
+            <div class="finalChoices">
+                <h2>User Results</h2>
+                <ul>
+                    <li class="finalFont"></li>
+                    <!-- leave space between li so that the 'user results'are blank upon page load -->
+                    <li class="finalTextColour"> </li>
+                    <li class="finalBackgroundImage"> </li>
+        
+                </ul>
+            </div>
+        
+            <!-- carolines form -->
+            <div class="background-input">
+                <form action="">
+                    <label for="imageTags">What category of image do you want?</label>
+                    <select name="pixabayTags" id="pixabayTags">
+                        <option value="nature">Nature</option>
+                        <option value="animals">Animals</option>
+                        <option value="textures">Textures</option>
+                        <option value="landscapes">Landscapes</option>
+                        <option value="food">Food</option>
+                        <option value="abstract">Abstract</option>
+                    </select>
+                    <button class="submitImage">Change</button>
+                </form>
+            </div>
+        </section>
     </main>
+
     <footer class="wrapper">
     
     </footer>
