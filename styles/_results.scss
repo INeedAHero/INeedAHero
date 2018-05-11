@@ -21,15 +21,18 @@
         border: 1px solid red;
         top: 10%;
         left: 12%;
+        @include fontSize(30);
         @media (max-width: 1050px) {
             height: 420px;
             line-height: 420px;
+            @include fontSize(25);
         }
 
         @media(max-width: 890px) {
             // left: 75px;
             height: 350px;
             line-height: 350px;
+            @include fontSize(20);
         }
 
         @media (max-width: 680px) {
