@@ -29,13 +29,13 @@
                 <p>By cycling through high quality images from <a target="_blank" class="siteLink" href="https://pixabay.com/">Pixabay</a>, as well as a wide range of fonts from <a class="siteLink" target="_blank" href="https://fonts.google.com/">Google Fonts</a>, we are hoping you will find the perfect combo to compliment your website!</p>
                 
                     <div class="getStarted">
-                        <a href="#">Get Started</a>
+                        <a class="smoothScroll" href="#get-hero">Get Started</a>
                     </div>
             </div>
         </div>
     </header>
-    <main class="wrapper">
-        <form class="chooseDevice" action="">
+    <main class="get-hero wrapper" >
+        <form class="chooseDevice" action="" id="get-hero">
             <label for="font">Choose device</label>
             <select name="device" id="deviceChoice">
                 <option value="desktop">Desktop</option>
@@ -57,7 +57,7 @@
             <div class="colour-form-container">
                 <h3>Choose Your Font Colour</h3>
                 <form class="colourForm" action="">
-                    <input type="color">
+                    <input type="color" class="colour-btn">
                     <input class="submitColourForm" type="submit" value="Select Colour">
                 </form>
             </div>
@@ -67,6 +67,7 @@
                 <h3>Choose Your Font-Family</h3>
                 <form class="chooseFontStyle" action="">
                     <select name="font" id="fontChoice">
+                        <option value="">-</option>
                         <option value="serif">Serif</option>
                         <option value="sans-serif">Sans-Serif</option>
                         <option value="display">Display</option>
@@ -116,7 +117,6 @@
     </main>
 
     <footer class="wrapper">
-    
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>
