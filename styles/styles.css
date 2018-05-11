@@ -291,6 +291,8 @@ p {
     width: 75%;
     text-align: center;
     line-height: 520px;
+    border: 1px solid red;
+    z-index: -1;
     background-size: cover;
     background-position: center center;
     height: 520px;
