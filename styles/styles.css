@@ -325,15 +325,19 @@ p {
 /* background-image: url(../images/leaf.jpeg); */
 select {
   text-align: center;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  height: 39px;
+  width: 100px;
+  border: 1px solid black;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background: url("../images/down-arrow.png") no-repeat;
+  background-position: right; }
 
 .chooseDevice {
-  text-align: center;
-  padding-top: 50px; }
+  text-align: center; }
   .chooseDevice select {
-    height: 35px;
-    width: 100px;
-    border: 1px solid black; }
+    margin: 15px 0; }
 
 .inputs-container {
   display: -webkit-box;
@@ -349,6 +353,7 @@ select {
   .inputs-container .font-family-container,
   .inputs-container .user-text-container,
   .inputs-container .background-input {
+    margin-top: 15px;
     width: 22%;
     min-width: 200px;
     text-align: center; }
@@ -364,15 +369,52 @@ select {
     .inputs-container .background-input select,
     .inputs-container .background-input input,
     .inputs-container .background-input button {
-      width: 100%; }
+      width: 100%;
+      font-family: "Arimo", sans-serif;
+      padding: 10px 30px;
+      font-size: 14px;
+      font-size: 1.4rem;
+      margin: 10px 0; }
+    .inputs-container .colour-form-container input,
+    .inputs-container .colour-form-container button,
+    .inputs-container .font-family-container input,
+    .inputs-container .font-family-container button,
+    .inputs-container .user-text-container input,
+    .inputs-container .user-text-container button,
+    .inputs-container .background-input input,
+    .inputs-container .background-input button {
+      border: 1px solid black;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      -webkit-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      transition: all ease 0.3s;
+      text-align: center; }
+      .inputs-container .colour-form-container input:hover,
+      .inputs-container .colour-form-container button:hover,
+      .inputs-container .font-family-container input:hover,
+      .inputs-container .font-family-container button:hover,
+      .inputs-container .user-text-container input:hover,
+      .inputs-container .user-text-container button:hover,
+      .inputs-container .background-input input:hover,
+      .inputs-container .background-input button:hover {
+        background: #e9e45f;
+        border: 1px solid white; }
+      .inputs-container .colour-form-container input.colour-btn,
+      .inputs-container .colour-form-container button.colour-btn,
+      .inputs-container .font-family-container input.colour-btn,
+      .inputs-container .font-family-container button.colour-btn,
+      .inputs-container .user-text-container input.colour-btn,
+      .inputs-container .user-text-container button.colour-btn,
+      .inputs-container .background-input input.colour-btn,
+      .inputs-container .background-input button.colour-btn {
+        padding: 0;
+        height: 40px; }
     .inputs-container .colour-form-container h3,
     .inputs-container .font-family-container h3,
     .inputs-container .user-text-container h3,
     .inputs-container .background-input h3 {
       text-transform: uppercase; }
-
-html {
-  font-size: 62.5%; }
 
 body {
   background: #cdcdcd; }
@@ -381,3 +423,6 @@ body {
     margin: 0 auto; }
   body img {
     max-width: 100%; }
+
+main {
+  padding-top: 100px; }

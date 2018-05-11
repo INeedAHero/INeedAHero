@@ -133,6 +133,13 @@ app.init = function () {
 $(function () {
   app.init();
 
+  //add smoothscroll to app
+  $('a').on('click', function(e){
+        e.preventDefault();
+        $("html").animate({ scrollTop: $("#get-hero").offset().top }, "slow");
+  });
+
+
   // change the header text based on the users input
   $('.userText').on('submit', function (e) {
     e.preventDefault();

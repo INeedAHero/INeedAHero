@@ -1,15 +1,20 @@
 select {
     text-align: center;
     text-transform: uppercase;
+    height: 39px ;
+    width: 100px;
+    border: 1px solid black;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url('../images/down-arrow.png')  no-repeat;
+    background-position: right;
 }
 
 .chooseDevice {
     text-align: center;
-    padding-top: 50px;
     select {
-        height: 35px ;
-        width: 100px;
-        border: 1px solid black;
+        margin: 15px 0;
+
     }
 }
 
@@ -21,6 +26,7 @@ select {
     .font-family-container,
     .user-text-container,
     .background-input {
+        margin-top: 15px;
         width: 22%;
         min-width: 200px;
         text-align: center;
@@ -28,12 +34,30 @@ select {
         input,
         button {
             width: 100%;
+            font-family: $mainType;
+            padding: 10px 30px;
+            @include fontSize(14);
+            margin: 10px 0;
+        }
+        input, 
+        button {
+            border: 1px solid black;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all ease 0.3s;
+            text-align: center;
+            &:hover {
+                background:$yellow;
+                border: 1px solid white;
+            }
+
+            &.colour-btn {
+                padding: 0;
+                height: 40px;
+            }
         }
         h3 {
             text-transform: uppercase;
         }
-    }
-    @media (max-width: 1000px) {
-        
     }
 }
