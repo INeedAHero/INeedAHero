@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>I Need a Hero</title>
     <link rel="stylesheet" href="styles/styles.css">
-
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Roboto:300,400" rel="stylesheet">
@@ -37,19 +38,18 @@
                 <option value="mobile">Mobile</option>
             </select>
         </form>
+        <div class="device-bg-container">
             <div class="chosenDevice">
                     <h1>User Header</h1>
             </div>
             <div class="deviceBackground">
             </div>
+        </div>
     
-        <!-- <div class="headerText">
-        <h1>User Header</h1>
-    </div> -->
         <section class="inputs-container ">
             <!-- choose a colour for the header -->
             <div class="colour-form-container">
-                <h3>Choose Your Colour</h3>
+                <h3>Choose Your Font Colour</h3>
                 <form class="colourForm" action="">
                     <input type="color">
                     <input class="submitColourForm" type="submit" value="Select Colour">
@@ -60,7 +60,6 @@
             <div class="font-family-container">
                 <h3>Choose Your Font-Family</h3>
                 <form class="chooseFontStyle" action="">
-                    <label for="font">Choose your font style</label>
                     <select name="font" id="fontChoice">
                         <option value="serif">Serif</option>
                         <option value="sans-serif">Sans-Serif</option>
@@ -80,10 +79,11 @@
             </div>
             <!-- carolines form -->
             <div class="background-input">
-                <h3>Randomize Your Hero Background</h3>
+                <h3>Pick Your Background Category</h3>
                 <form action="">
-                    <label for="imageTags">What category of image do you want?</label>
+
                     <select name="pixabayTags" id="pixabayTags">
+                        <option value=""></option>
                         <option value="nature">Nature</option>
                         <option value="animals">Animals</option>
                         <option value="textures">Textures</option>
@@ -91,7 +91,7 @@
                         <option value="food">Food</option>
                         <option value="abstract">Abstract</option>
                     </select>
-                    <button class="submitImage">Change</button>
+                    <button class="submitImage">Randomize</button>
                 </form>
             </div>   
         </section> <!-- /.inputs-container -->

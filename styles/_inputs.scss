@@ -1,10 +1,39 @@
+select {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.chooseDevice {
+    text-align: center;
+    padding-top: 50px;
+    select {
+        height: 35px ;
+        width: 100px;
+        border: 1px solid black;
+    }
+}
+
 .inputs-container {
-    display: grid;
-    grid-gap: 3%;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    .colour-form-container,
+    .font-family-container,
+    .user-text-container,
+    .background-input {
+        width: 22%;
+        min-width: 200px;
+        text-align: center;
+        select,
+        input,
+        button {
+            width: 100%;
+        }
+        h3 {
+            text-transform: uppercase;
+        }
+    }
     @media (max-width: 1000px) {
-        grid-template-columns: 2fr 2fr;
-        grid-template-rows: 2fr 2fr;
-        grid-row-gap: 10%;
+        
     }
 }

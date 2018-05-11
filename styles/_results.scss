@@ -1,24 +1,42 @@
 .chosenDevice {
-            height: 722px;
-            width: 1000px;
-            position: relative;
-            background-image: url(../images/macbook-mockup.png);
-        }
+    margin: 0 auto;
+    width: 100%;
+    height: 75vh;;
+    position: relative;
+    background-image: url(../images/macbook-mockup.png);
+    background-position: center center;
+    background-size: cover ;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h1 {
+        font-size: 4vw;
+    }
+    .tabletBg {
+        background-image: url('../images/ipad-mockup.png');
+    }
+    
+    .phoneBg {
+        background-image: url('../images/iphone-mockup.png');
+    }
 
-        .deviceBackground {
-            position: absolute;
-            top: 50px;
-            left: 100px;
-            z-index: -1;
-            height: 700px;
-            width: 900px;
-            /* background-image: url(../images/leaf.jpeg); */
-            background-position: center center;
-            background-size: cover;
-        }
+    .desktopBg {
+        background-image: url('../images/macbook-mockup.png');
+    }
+}
+.device-bg-container {
+    position: relative;
+    .deviceBackground {
+        position: absolute;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        height: 80vh;
+        background-size: cover;
+        /* background-image: url(../images/leaf.jpeg); */
+        background-position: center center;
+        background-size: cover;
+    }
+}
 
-        .headerText {
-            text-align: center;
-            line-height: 700px;
-            z-index: 2;
-        }
