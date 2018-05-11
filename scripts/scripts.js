@@ -103,6 +103,9 @@ app.events = function () {
 
   })
 
+
+   
+
   // caroline's events
 
   $('#pixabayTags').on('change', function () {
