@@ -278,21 +278,87 @@ p {
     -webkit-transform: translateX(-8px) translateY(-8px);
     transform: translateX(-8px) translateY(-8px); } }
 
-.deviceBackground {
-  height: 700px;
-  width: 900px;
-  /* background-image: url(../images/leaf.jpeg); */
+.chosenDevice {
+  margin: 0 auto;
+  width: 100%;
+  height: 75vh;
+  position: relative;
+  background-image: url(../images/macbook-mockup.png);
   background-position: center center;
-  background-size: cover; }
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  .chosenDevice h1 {
+    font-size: 4vw; }
 
-.headerText {
+.device-bg-container {
+  position: relative; }
+  .device-bg-container .deviceBackground {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: 80vh;
+    background-size: cover;
+    /* background-image: url(../images/leaf.jpeg); */
+    background-position: center center;
+    background-size: cover; }
+
+select {
   text-align: center;
-  line-height: 700px;
-  z-index: 2; }
+  text-transform: uppercase; }
+
+.chooseDevice {
+  text-align: center;
+  padding-top: 50px; }
+  .chooseDevice select {
+    height: 35px;
+    width: 100px;
+    border: 1px solid black; }
 
 .inputs-container {
-  display: grid;
-  grid-gap: 3%; }
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap; }
+  .inputs-container .colour-form-container,
+  .inputs-container .font-family-container,
+  .inputs-container .user-text-container,
+  .inputs-container .background-input {
+    width: 22%;
+    min-width: 200px;
+    text-align: center; }
+    .inputs-container .colour-form-container select,
+    .inputs-container .colour-form-container input,
+    .inputs-container .colour-form-container button,
+    .inputs-container .font-family-container select,
+    .inputs-container .font-family-container input,
+    .inputs-container .font-family-container button,
+    .inputs-container .user-text-container select,
+    .inputs-container .user-text-container input,
+    .inputs-container .user-text-container button,
+    .inputs-container .background-input select,
+    .inputs-container .background-input input,
+    .inputs-container .background-input button {
+      width: 100%; }
+    .inputs-container .colour-form-container h3,
+    .inputs-container .font-family-container h3,
+    .inputs-container .user-text-container h3,
+    .inputs-container .background-input h3 {
+      text-transform: uppercase; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -428,9 +494,13 @@ legend, button::-moz-focus-inner, input::-moz-focus-inner {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+html {
+  font-size: 62.5%; }
+
 body {
-  background: #cbcbcb; }
+  background: #cdcdcd; }
   body .wrapper {
-    max-width: 1920px; }
+    max-width: 80%;
+    margin: 0 auto; }
   body img {
     max-width: 100%; }

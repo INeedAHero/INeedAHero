@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>I Need a Hero</title>
     <link rel="stylesheet" href="styles/styles.css">
-
+    <link rel="icon" type="image/png" href="images/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="images/favicon-16x16.png" sizes="16x16" />
     <!-- google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Titan+One" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Roboto:300,400" rel="stylesheet">
@@ -42,41 +43,65 @@
                 <option value="mobile">Mobile</option>
             </select>
         </form>
+        <div class="device-bg-container">
             <div class="chosenDevice">
                     <img class="deviceChosen" src="" alt="">
                     <h1>User Header</h1>
             </div>
             <div class="deviceBackground">
             </div>
+        </div>
     
-        <!-- <div class="headerText">
-        <h1>User Header</h1>
-    </div> -->
-        <section class="inputs-container">
+        <section class="inputs-container ">
             <!-- choose a colour for the header -->
-            <form class="colourForm" action="">
-                <input type="color">
-                <input class="submitColourForm" type="submit">
-            </form>
+            <div class="colour-form-container">
+                <h3>Choose Your Font Colour</h3>
+                <form class="colourForm" action="">
+                    <input type="color">
+                    <input class="submitColourForm" type="submit" value="Select Colour">
+                </form>
+            </div>
         
             <!-- choose a font style -->
-            <form class="chooseFontStyle" action="">
-                <label for="font">Choose your font style</label>
-                <select name="font" id="fontChoice">
-                    <option value="serif">Serif</option>
-                    <option value="sans-serif">Sans-Serif</option>
-                    <option value="display">Display</option>
-                    <option value="handwriting">Handwriting</option>
-                    <option value="monospace">Monospace</option>
-                </select>
-            </form>
-            <button class="shuffleFont">Shuffle Font</button>
-        
-            <form class="userText" action="">
-                <input type="text" placeholder="Your header here">
-                <input type="submit" value="change header">
-            </form>
-        
+            <div class="font-family-container">
+                <h3>Choose Your Font-Family</h3>
+                <form class="chooseFontStyle" action="">
+                    <select name="font" id="fontChoice">
+                        <option value="serif">Serif</option>
+                        <option value="sans-serif">Sans-Serif</option>
+                        <option value="display">Display</option>
+                        <option value="handwriting">Handwriting</option>
+                        <option value="monospace">Monospace</option>
+                    </select>
+                </form>
+                <button class="shuffleFont">Shuffle Font</button>
+            </div>
+            <div class="user-text-container">
+                <h3>Input Some Hero Text</h3>                
+                <form class="userText" action="">
+                    <input type="text" placeholder="Your header here">
+                    <input type="submit" value="change header">
+                </form>
+            </div>
+            <!-- carolines form -->
+            <div class="background-input">
+                <h3>Pick Your Background Category</h3>
+                <form action="">
+
+                    <select name="pixabayTags" id="pixabayTags">
+                        <option value=""></option>
+                        <option value="nature">Nature</option>
+                        <option value="animals">Animals</option>
+                        <option value="textures">Textures</option>
+                        <option value="landscapes">Landscapes</option>
+                        <option value="food">Food</option>
+                        <option value="abstract">Abstract</option>
+                    </select>
+                    <button class="submitImage">Randomize</button>
+                </form>
+            </div>   
+        </section> <!-- /.inputs-container -->
+        <section class="output-choices-container">
             <div class="finalChoices">
                 <h2>User Results</h2>
                 <ul>
@@ -86,22 +111,6 @@
                     <li class="finalBackgroundImage"> </li>
         
                 </ul>
-            </div>
-        
-            <!-- carolines form -->
-            <div class="background-input">
-                <form action="">
-                    <label for="imageTags">What category of image do you want?</label>
-                    <select name="pixabayTags" id="pixabayTags">
-                        <option value="nature">Nature</option>
-                        <option value="animals">Animals</option>
-                        <option value="textures">Textures</option>
-                        <option value="landscapes">Landscapes</option>
-                        <option value="food">Food</option>
-                        <option value="abstract">Abstract</option>
-                    </select>
-                    <button class="submitImage">Change</button>
-                </form>
             </div>
         </section>
     </main>
