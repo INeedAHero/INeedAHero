@@ -93,15 +93,29 @@ app.events = function () {
 
     console.log(selectedDevice);
 
+  //   if (selectedDevice === 'mobile') {
+  //     console.log('I chose the mobile device.');
+  //     $('.chosenDevice').css('background-image', 'url(images/iphone-mockup.png)');
+  //   } else if (selectedDevice === 'tablet') {
+  //     $('.chosenDevice').css('background-image', 'url(images/ipad-mockup.png)');
+  //   } else if (selectedDevice === 'desktop') {
+  //     $('.chosenDevice').css('background-image', 'url(images/macbook-mockup.png)');
+  //   }
+  // })
+
+
     if (selectedDevice === 'mobile') {
       console.log('I chose the mobile device.');
-      $('.chosenDevice').css('background-image', 'url(images/iphone-mockup.png)');
+      $('.deviceChosen').attr('src', 'images/iphone-mockup.png');
     } else if (selectedDevice === 'tablet') {
-      $('.chosenDevice').css('background-image', 'url(images/ipad-mockup.png)');
+      $('.deviceChosen').attr('src', 'images/ipad-mockup.png');
     } else if (selectedDevice === 'desktop') {
-      $('.chosenDevice').css('background-image', 'url(images/macbook-mockup.png)');
+      $('.deviceChosen').attr('src', 'images/macbook-mockup.png');
     }
   })
+
+
+   
 
   // caroline's events
 
