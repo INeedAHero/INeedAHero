@@ -28,7 +28,8 @@ app.getHero = function (search) { //function to pull from API
 
         // $('.heroArt').css('background-image', 'url(' + userImage + ')');
 
-        $('.deviceBackground').css('background-image', 'url(' + userImage + ')');
+        $('.backgroundContainer').css('background-image', 'url(' + userImage + ')');
+        // $('.chosenBackground').attr('src', userImage);
 
         $('.finalBackgroundImage').html(`<a target="_blank" href=${userImage}>See background image</a>`)
 
@@ -59,7 +60,7 @@ app.getFont = function (font) {
         const fontFamily = fontCategory[randomFont].family;
         const fontLink = fontCategory[randomFont].files.regular;
 
-        $('h1').css('font-family', fontFamily);
+        $('.userHeader').css('font-family', fontFamily);
 
         // append the final font to the bottom of the page so that the user has all of the information to make their hero image 
 
@@ -91,17 +92,28 @@ app.events = function () {
   $('#deviceChoice').on('change', function () {
     const selectedDevice = $(this).val();
 
-    console.log(selectedDevice);
-    if (selectedDevice === "mobile") {
-      console.log("I chose the mobile device.");
-      $(".chosenDevice").css("background-image", "url(images/iphone-mockup.png)");
-    } else if (selectedDevice === "tablet") {
-      $(".chosenDevice").css("background-image", "url(images/ipad-mockup.png)");
-    } else if (selectedDevice === "desktop") {
-      $(".chosenDevice").css("background-image", "url(images/macbook-mockup.png)");
-    }
+  //   console.log(selectedDevice);
+  //   if (selectedDevice === "mobile") {
+  //     console.log("I chose the mobile device.");
+  //     $(".chosenDevice").css("background-image", "url(images/iphone-mockup.png)");
+  //   } else if (selectedDevice === "tablet") {
+  //     $(".chosenDevice").css("background-image", "url(images/ipad-mockup.png)");
+  //   } else if (selectedDevice === "desktop") {
+  //     $(".chosenDevice").css("background-image", "url(images/macbook-mockup.png)");
+  //   }
 
-  })
+  // })
+
+  console.log(selectedDevice);
+  if (selectedDevice === "mobile") {
+    console.log("I chose the mobile device.");
+    $(".deviceChosen").attr("src", "images/iphone-mockup.png");
+  } else if (selectedDevice === "tablet") {
+    $(".deviceChosen").attr("src", "images/ipad-mockup.png");
+  } else if (selectedDevice === "desktop") {
+    $(".deviceChosen").attr("src", "images/macbook-mockup.png");
+  }
+})
 
 
    
@@ -134,8 +146,8 @@ $(function () {
     const textInput = $('input[type=text]')
     const usersInput = textInput.val();
     // clear the header and the user input with each 'submit'
-    $('h1').empty();
-    $('h1').append(usersInput);
+    $('.userHeader').empty();
+    $('.userHeader').append(usersInput);
     textInput.val('');
 
   })
@@ -143,7 +155,7 @@ $(function () {
   $('.submitColourForm').on('click', function (e) {
     e.preventDefault();
     const colourInput = $('input[type=color]').val();
-    $('h1').css('color', colourInput);
+    $('.userHeader').css('color', colourInput);
     $('.finalTextColour').html(colourInput);
   })
 });

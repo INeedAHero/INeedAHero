@@ -1,32 +1,74 @@
 .chosenDevice {
     margin: 0 auto;
-    width: 100%;
-    height: 75vh;;
+    // width: 100%;
     position: relative;
-    background-image: url(../images/macbook-mockup.png);
+    text-align: center;
+    background-image: url('');
     background-position: center center;
-    background-size: cover ;
-    background-repeat: no-repeat;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    h1 {
-        font-size: 4vw;
+    width: 100%;
+
+    & .backgroundContainer {
+        margin: 0 auto;
+        width: 75%;
+        text-align: center;
+        line-height: 520px;
+        // border: 1px solid red;
+        // z-index: -1;
+        background-size: cover;
+        background-position: center center;
+        height: 520px;
+        position: absolute;
+        border: 1px solid red;
+        top: 10%;
+        left: 12%;
+        @media (max-width: 1050px) {
+            height: 420px;
+            line-height: 420px;
+        }
+
+        @media(max-width: 890px) {
+            // left: 75px;
+            height: 350px;
+            line-height: 350px;
+        }
+
+        @media (max-width: 680px) {
+            height: 280px;
+            // left: 50px;
+            line-height: 280px;
+        }
+
+        @media (max-width: 550px) {
+            height: 250px;
+            top: 0;
+            line-height: 250px;
+        }
+
+        @media (max-width: 430px) {
+           left: 0;
+           line-height: 200px;
+            height: 80%;
+            width: 100%;
+        }
     }
 
+
+
+
 }
-.device-bg-container {
-    position: relative;
-    .deviceBackground {
-        position: absolute;
-        top: 0;
-        z-index: -1;
-        width: 100%;
-        height: 80vh;
-        background-size: cover;
+// .device-bg-container {
+//     position: relative;
+//     .deviceBackground {
+//         position: absolute;
+//         top: 0;
+//         z-index: -1;
+        // width: 80%;
+        // height: 80vh;
+        // margin: 0 auto;
+        // background-size: cover;
         /* background-image: url(../images/leaf.jpeg); */
-        background-position: center center;
-        background-size: cover;
-    }
-}
+//         background-position: center center;
+//         background-size: cover;
+//     }
+// }
 

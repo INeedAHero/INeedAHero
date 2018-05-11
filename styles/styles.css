@@ -281,38 +281,48 @@ p {
 
 .chosenDevice {
   margin: 0 auto;
-  width: 100%;
-  height: 75vh;
   position: relative;
-  background-image: url(../images/macbook-mockup.png);
+  text-align: center;
+  background-image: url("");
   background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center; }
-  .chosenDevice h1 {
-    font-size: 4vw; }
-
-.device-bg-container {
-  position: relative; }
-  .device-bg-container .deviceBackground {
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    width: 100%;
-    height: 80vh;
+  width: 100%; }
+  .chosenDevice .backgroundContainer {
+    margin: 0 auto;
+    width: 75%;
+    text-align: center;
+    line-height: 520px;
     background-size: cover;
-    /* background-image: url(../images/leaf.jpeg); */
     background-position: center center;
-    background-size: cover; }
+    height: 520px;
+    position: absolute;
+    border: 1px solid red;
+    top: 10%;
+    left: 12%; }
+    @media (max-width: 1050px) {
+      .chosenDevice .backgroundContainer {
+        height: 420px;
+        line-height: 420px; } }
+    @media (max-width: 890px) {
+      .chosenDevice .backgroundContainer {
+        height: 350px;
+        line-height: 350px; } }
+    @media (max-width: 680px) {
+      .chosenDevice .backgroundContainer {
+        height: 280px;
+        line-height: 280px; } }
+    @media (max-width: 550px) {
+      .chosenDevice .backgroundContainer {
+        height: 250px;
+        top: 0;
+        line-height: 250px; } }
+    @media (max-width: 430px) {
+      .chosenDevice .backgroundContainer {
+        left: 0;
+        line-height: 200px;
+        height: 80%;
+        width: 100%; } }
 
+/* background-image: url(../images/leaf.jpeg); */
 select {
   text-align: center;
   text-transform: uppercase;
