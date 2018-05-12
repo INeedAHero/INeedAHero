@@ -288,47 +288,44 @@ p {
   width: 100%; }
   .chosenDevice .backgroundContainer {
     margin: 0 auto;
-    width: 75%;
+    width: 60%;
     text-align: center;
-    line-height: 520px;
-    border: 1px solid red;
     z-index: -1;
     background-size: cover;
     background-position: center center;
     height: 520px;
     position: absolute;
-    border: 1px solid red;
     top: 10%;
-    left: 12%;
-    font-size: 30px;
-    font-size: 3rem; }
-    @media (max-width: 1050px) {
+    left: 20%;
+    font-size: 21px;
+    font-size: 2.1rem; }
+    .chosenDevice .backgroundContainer .userHeader {
+      padding-top: 25%; }
+      @media (max-width: 1000px) {
+        .chosenDevice .backgroundContainer .userHeader {
+          padding-top: 25%; } }
+      @media (max-width: 900px) {
+        .chosenDevice .backgroundContainer .userHeader {
+          font-size: 35px;
+          font-size: 3.5rem; } }
+      @media (max-width: 750px) {
+        .chosenDevice .backgroundContainer .userHeader {
+          font-size: 5vw; } }
+    @media (max-width: 1190px) {
       .chosenDevice .backgroundContainer {
-        height: 420px;
-        line-height: 420px;
-        font-size: 25px;
-        font-size: 2.5rem; } }
-    @media (max-width: 890px) {
+        width: 70%;
+        left: 15%; } }
+    @media (max-width: 1000px) {
       .chosenDevice .backgroundContainer {
-        height: 350px;
-        line-height: 350px;
-        font-size: 20px;
-        font-size: 2rem; } }
-    @media (max-width: 680px) {
-      .chosenDevice .backgroundContainer {
-        height: 280px;
-        line-height: 280px; } }
-    @media (max-width: 550px) {
-      .chosenDevice .backgroundContainer {
-        height: 250px;
-        top: 0;
-        line-height: 250px; } }
-    @media (max-width: 430px) {
-      .chosenDevice .backgroundContainer {
+        width: 100%;
         left: 0;
-        line-height: 200px;
-        height: 80%;
-        width: 100%; } }
+        top: 5%; } }
+    @media (max-width: 850px) {
+      .chosenDevice .backgroundContainer {
+        top: 0; } }
+    @media (max-width: 750px) {
+      .chosenDevice .backgroundContainer {
+        height: 90%; } }
 
 /* background-image: url(../images/leaf.jpeg); */
 select {
@@ -393,13 +390,14 @@ select {
     .inputs-container .user-text-container button,
     .inputs-container .background-input input,
     .inputs-container .background-input button {
-      border: 1px solid black;
+      border: 1px solid white;
       text-transform: uppercase;
       letter-spacing: 2px;
       -webkit-transition: all ease 0.3s;
       -o-transition: all ease 0.3s;
       transition: all ease 0.3s;
-      text-align: center; }
+      text-align: center;
+      background: #cdcdcd; }
       .inputs-container .colour-form-container input:hover,
       .inputs-container .colour-form-container button:hover,
       .inputs-container .font-family-container input:hover,
@@ -409,7 +407,8 @@ select {
       .inputs-container .background-input input:hover,
       .inputs-container .background-input button:hover {
         background: #e9e45f;
-        border: 1px solid white; }
+        border: 1px solid white;
+        color: white; }
       .inputs-container .colour-form-container input.colour-btn,
       .inputs-container .colour-form-container button.colour-btn,
       .inputs-container .font-family-container input.colour-btn,
@@ -420,11 +419,29 @@ select {
       .inputs-container .background-input button.colour-btn {
         padding: 0;
         height: 40px; }
-    .inputs-container .colour-form-container h3,
-    .inputs-container .font-family-container h3,
-    .inputs-container .user-text-container h3,
-    .inputs-container .background-input h3 {
-      text-transform: uppercase; }
+    .inputs-container .colour-form-container .headerInput,
+    .inputs-container .font-family-container .headerInput,
+    .inputs-container .user-text-container .headerInput,
+    .inputs-container .background-input .headerInput {
+      background: #e9e45f;
+      color: white;
+      text-transform: none;
+      text-align: left;
+      font-family: courier;
+      letter-spacing: 1px; }
+      .inputs-container .colour-form-container .headerInput:hover,
+      .inputs-container .font-family-container .headerInput:hover,
+      .inputs-container .user-text-container .headerInput:hover,
+      .inputs-container .background-input .headerInput:hover {
+        background: white;
+        border: 1px solid black;
+        color: black; }
+    .inputs-container .colour-form-container p,
+    .inputs-container .font-family-container p,
+    .inputs-container .user-text-container p,
+    .inputs-container .background-input p {
+      font-size: 14px;
+      font-size: 1.4rem; }
 
 body {
   background: #cdcdcd; }

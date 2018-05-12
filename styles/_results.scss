@@ -9,50 +9,89 @@
 
     & .backgroundContainer {
         margin: 0 auto;
-        width: 75%;
+        width: 60%;
         text-align: center;
-        line-height: 520px;
-        border: 1px solid red;
+        // line-height: 520px;
+        // border: 1px solid red;
         z-index: -1;
         background-size: cover;
         background-position: center center;
         height: 520px;
         position: absolute;
-        border: 1px solid red;
+        // border: 1px solid red;
         top: 10%;
-        left: 12%;
-        @include fontSize(30);
-        @media (max-width: 1050px) {
-            height: 420px;
-            line-height: 420px;
-            @include fontSize(25);
+        left: 20%;
+        @include fontSize(21);
+
+
+
+
+        & .userHeader {
+            padding-top: 25%;
+            @media (max-width: 1000px) {
+                padding-top: 25%;
+            }
+            @media (max-width: 900px) {
+                @include fontSize(35);
+            }
+            @media (max-width: 750px) {
+                font-size: 5vw;
+            }
         }
 
-        @media(max-width: 890px) {
-            // left: 75px;
-            height: 350px;
-            line-height: 350px;
-            @include fontSize(20);
+        // 1190 to 100
+
+        @media (max-width: 1190px) {
+            width: 70%;
+            left: 15%;
         }
 
-        @media (max-width: 680px) {
-            height: 280px;
-            // left: 50px;
-            line-height: 280px;
-        }
-
-        @media (max-width: 550px) {
-            height: 250px;
-            top: 0;
-            line-height: 250px;
-        }
-
-        @media (max-width: 430px) {
-           left: 0;
-           line-height: 200px;
-            height: 80%;
+        @media (max-width: 1000px) {
             width: 100%;
+            left: 0;
+            top: 5%;
         }
+
+        @media (max-width: 850px) {
+            top: 0;
+
+        }
+
+        @media (max-width: 750px) {
+            height: 90%;
+        
+        }
+        // @media (max-width: 1050px) {
+        //     height: 420px;
+        //     line-height: 420px;
+        //     @include fontSize(25);
+        // }
+
+        // @media(max-width: 890px) {
+        //     // left: 75px;
+        //     height: 350px;
+        //     line-height: 350px;
+        //     @include fontSize(20);
+        // }
+
+            // @media (max-width: 680px) {
+            //     height: 280px;
+            //     // left: 50px;
+            //     line-height: 280px;
+            // }
+
+            // @media (max-width: 550px) {
+            //     height: 250px;
+            //     top: 0;
+            //     line-height: 250px;
+            // }
+
+            // @media (max-width: 430px) {
+            //    left: 0;
+            //    line-height: 200px;
+            //     height: 80%;
+            //     width: 100%;
+            // }
     }
 
 
