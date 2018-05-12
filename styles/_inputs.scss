@@ -3,6 +3,7 @@ select {
     text-transform: uppercase;
     height: 39px ;
     width: 100px;
+    letter-spacing: 2px;
     border: 1px solid black;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -10,13 +11,27 @@ select {
     background-size: 7%;
     background-position-x: 95%;
     background-position-y: 50%;
+    border-radius: 0;   
 }
 
 .chooseDevice {
     text-align: center;
+    position: relative;
     select {
-        margin: 15px 0;
-
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        z-index: 100;
+        width: 250px;
+        background-size: 10%;
+        text-align: center;
+        margin: 0 auto;
+        padding: 10px 30px;
+        @media (max-width: 690px){
+            position: relative;
+        }
     }
 }
 
@@ -28,7 +43,7 @@ select {
     .font-family-container,
     .user-text-container,
     .background-input {
-        margin-top: 15px;
+        // margin-top: 15px;
         width: 22%;
         min-width: 200px;
         text-align: center;
@@ -39,7 +54,8 @@ select {
             font-family: $mainType;
             padding: 10px 30px;
             @include fontSize(14);
-            margin: 10px 0;
+            margin: 6px 0;
+            font-size: 1.3rem;
         }
         input, 
         button {
@@ -48,14 +64,25 @@ select {
             letter-spacing: 2px;
             transition: all ease 0.3s;
             text-align: center;
+            background: transparent;
             &:hover {
                 background:$yellow;
                 border: 1px solid white;
-            }
-
+            } 
             &.colour-btn {
                 padding: 0;
                 height: 40px;
+            }              
+
+        }
+        button, 
+        input[type=submit] {
+            background:$yellow;
+            border: 1px solid white;
+            &:hover {
+                background: transparent;
+                border: 1px solid black;
+                color: white;
             }
         }
         h3 {

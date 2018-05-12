@@ -36,8 +36,8 @@
     </header>
     <main class="get-hero wrapper" >
         <form class="chooseDevice" action="" id="get-hero">
-            <label for="font">Choose device</label>
             <select name="device" id="deviceChoice">
+                <option value="">Choose your device</option>
                 <option value="desktop">Desktop</option>
                 <option value="tablet">Tablet</option>
                 <option value="mobile">Mobile</option>
@@ -66,7 +66,7 @@
             <div class="font-family-container">
                 <form class="chooseFontStyle" action="">
                     <select name="font" id="fontChoice">
-                        <option value=""></option>
+                        <option value="">Font-Family</option>
                         <option value="serif">Serif</option>
                         <option value="sans-serif">Sans-Serif</option>
                         <option value="display">Display</option>
@@ -78,7 +78,7 @@
             </div>
             <div class="user-text-container">
                 <form class="userText" action="">
-                    <input type="text" placeholder="Your header here">
+                    <input type="text" placeholder="Your header text">
                     <input type="submit" value="change header">
                 </form>
             </div>
@@ -87,7 +87,7 @@
                 <form action="">
 
                     <select name="pixabayTags" id="pixabayTags">
-                        <option value=""></option>
+                        <option value="">Background Theme</option>
                         <option value="nature">Nature</option>
                         <option value="animals">Animals</option>
                         <option value="textures">Textures</option>
@@ -95,13 +95,12 @@
                         <option value="food">Food</option>
                         <option value="abstract">Abstract</option>
                     </select>
-                    <button class="submitImage">Randomize</button>
+                    <button class="submitImage">Randomize Image</button>
                 </form>
             </div>   
         </section> <!-- /.inputs-container -->
         <section class="output-choices-container">
             <div class="finalChoices">
-                <h2>User Results</h2>
                 <ul>
                     <li class="finalFont"></li>
                     <!-- leave space between li so that the 'user results'are blank upon page load -->
