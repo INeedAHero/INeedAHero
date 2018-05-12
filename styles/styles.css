@@ -330,24 +330,58 @@ p {
         height: 80%;
         width: 100%; } }
 
+.finalChoices ul {
+  padding: 0;
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  text-transform: uppercase; }
+  .finalChoices ul li {
+    list-style-type: none; }
+    .finalChoices ul li a {
+      color: black; }
+
 /* background-image: url(../images/leaf.jpeg); */
 select {
   text-align: center;
   text-transform: uppercase;
   height: 39px;
   width: 100px;
+  letter-spacing: 2px;
   border: 1px solid black;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url("../images/down-arrow.png") no-repeat;
   background-size: 7%;
   background-position-x: 95%;
-  background-position-y: 50%; }
+  background-position-y: 50%;
+  border-radius: 0; }
 
 .chooseDevice {
-  text-align: center; }
+  text-align: center;
+  position: relative; }
   .chooseDevice select {
-    margin: 15px 0; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 250px;
+    background-size: 10%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 30px; }
+    @media (max-width: 690px) {
+      .chooseDevice select {
+        position: relative; } }
 
 .inputs-container {
   display: -webkit-box;
@@ -363,7 +397,6 @@ select {
   .inputs-container .font-family-container,
   .inputs-container .user-text-container,
   .inputs-container .background-input {
-    margin-top: 15px;
     width: 22%;
     min-width: 200px;
     text-align: center; }
@@ -384,7 +417,8 @@ select {
       padding: 10px 30px;
       font-size: 14px;
       font-size: 1.4rem;
-      margin: 10px 0; }
+      margin: 6px 0;
+      font-size: 1.3rem; }
     .inputs-container .colour-form-container input,
     .inputs-container .colour-form-container button,
     .inputs-container .font-family-container input,
@@ -399,7 +433,8 @@ select {
       -webkit-transition: all ease 0.3s;
       -o-transition: all ease 0.3s;
       transition: all ease 0.3s;
-      text-align: center; }
+      text-align: center;
+      background: transparent; }
       .inputs-container .colour-form-container input:hover,
       .inputs-container .colour-form-container button:hover,
       .inputs-container .font-family-container input:hover,
@@ -420,6 +455,27 @@ select {
       .inputs-container .background-input button.colour-btn {
         padding: 0;
         height: 40px; }
+    .inputs-container .colour-form-container button,
+    .inputs-container .colour-form-container input[type=submit],
+    .inputs-container .font-family-container button,
+    .inputs-container .font-family-container input[type=submit],
+    .inputs-container .user-text-container button,
+    .inputs-container .user-text-container input[type=submit],
+    .inputs-container .background-input button,
+    .inputs-container .background-input input[type=submit] {
+      background: #e9e45f;
+      border: 1px solid white; }
+      .inputs-container .colour-form-container button:hover,
+      .inputs-container .colour-form-container input[type=submit]:hover,
+      .inputs-container .font-family-container button:hover,
+      .inputs-container .font-family-container input[type=submit]:hover,
+      .inputs-container .user-text-container button:hover,
+      .inputs-container .user-text-container input[type=submit]:hover,
+      .inputs-container .background-input button:hover,
+      .inputs-container .background-input input[type=submit]:hover {
+        background: transparent;
+        border: 1px solid black;
+        color: white; }
     .inputs-container .colour-form-container h3,
     .inputs-container .font-family-container h3,
     .inputs-container .user-text-container h3,
@@ -435,4 +491,5 @@ body {
     max-width: 100%; }
 
 main {
-  padding-top: 100px; }
+  padding-top: 100px;
+  height: 100vh; }
