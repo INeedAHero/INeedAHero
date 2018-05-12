@@ -7,7 +7,7 @@ select {
     border: 1px solid black;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url('../images/down-arrow.png')  no-repeat;
+    background: url('../images/down-arrow.png') no-repeat;
     background-size: 7%;
     background-position-x: 95%;
     background-position-y: 50%;
@@ -17,6 +17,7 @@ select {
 .chooseDevice {
     text-align: center;
     position: relative;
+    top: 15px;
     select {
         position: absolute;
         left: 0;
@@ -36,6 +37,8 @@ select {
 }
 
 .inputs-container {
+    position: relative;
+    bottom: 40px;
     display: flex;
     justify-content: space-around;
     flex-flow: row wrap;
@@ -43,7 +46,6 @@ select {
     .font-family-container,
     .user-text-container,
     .background-input {
-        // margin-top: 15px;
         width: 22%;
         min-width: 200px;
         text-align: center;
@@ -59,16 +61,18 @@ select {
         }
         input, 
         button {
-            border: 1px solid black;
+            border: 1px solid white;
             text-transform: uppercase;
             letter-spacing: 2px;
             transition: all ease 0.3s;
             text-align: center;
-            background: transparent;
+            background: #cdcdcd;
             &:hover {
                 background:$yellow;
                 border: 1px solid white;
-            } 
+                color: white;
+            }
+
             &.colour-btn {
                 padding: 0;
                 height: 40px;
@@ -77,16 +81,30 @@ select {
         }
         button, 
         input[type=submit] {
-            background:$yellow;
+            // background:$yellow;
             border: 1px solid white;
             &:hover {
-                background: transparent;
-                border: 1px solid black;
+                background: $yellow;
+                border: 1px solid white;
                 color: white;
             }
         }
-        h3 {
-            text-transform: uppercase;
+
+        & .headerInput {
+            background: $yellow;
+            color: white;
+            text-transform: none;
+            text-align: left;
+            font-family: courier;
+            letter-spacing: 1px;
+            &:hover {
+                background: white;
+                border: 1px solid black;
+                color: black;
+            }
+        }
+        p {
+            @include fontSize(14);
         }
     }
 }

@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arimo|Roboto:300,400" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Arimo|Bowlby+One|Roboto:300,400|Titan+One" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css?family=Exo|Mukta+Malar" rel="stylesheet">
+<!-- <link href="https://fonts.googleapis.com/css?family=Exo|Mukta+Malar" rel="stylesheet"> -->
 
 </head>
 <body>
@@ -34,7 +34,7 @@
             </div>
         </div>
     </header>
-    <main class="get-hero wrapper" >
+    <section class="get-hero wrapper">
         <form class="chooseDevice" action="" id="get-hero">
             <select name="device" id="deviceChoice">
                 <option value="">Choose your device</option>
@@ -43,19 +43,21 @@
                 <option value="mobile">Mobile</option>
             </select>
         </form>
+    </section>
         <div class="device-bg-container">
             <div class="chosenDevice">
                     <img class="deviceChosen" src="images/macbook-mockup.png" alt="">
                     <div class="backgroundContainer">
-                        <h1 class="userHeader">User Header</h1>
+                        <h1 class="userHeader">YOUR HEADER</h1>
                     </div>
             </div>
             
         </div>
     
-        <section class="inputs-container ">
+    <section class="inputs-container wrapper">
             <!-- choose a colour for the header -->
             <div class="colour-form-container">
+                <p>Choose Your Font Colour</p>
                 <form class="colourForm" action="">
                     <input type="color" class="colour-btn">
                     <input class="submitColourForm" type="submit" value="Select Colour">
@@ -64,6 +66,7 @@
         
             <!-- choose a font style -->
             <div class="font-family-container">
+                <p>Choose Your Font-Family</p>
                 <form class="chooseFontStyle" action="">
                     <select name="font" id="fontChoice">
                         <option value="">Font-Family</option>
@@ -77,13 +80,17 @@
                 <button class="shuffleFont">Shuffle Font</button>
             </div>
             <div class="user-text-container">
+                <p>Input Some Hero Text</p>                
                 <form class="userText" action="">
-                    <input type="text" placeholder="Your header text">
+                    <input class="headerInput" type="text" placeholder="Your header here">
+                <form class="userText" action="">
+                    <!-- <input type="text" placeholder="Your header text"> -->
                     <input type="submit" value="change header">
                 </form>
             </div>
             <!-- carolines form -->
             <div class="background-input">
+                <p>Pick Your Background Category</p>
                 <form action="">
 
                     <select name="pixabayTags" id="pixabayTags">
@@ -99,9 +106,10 @@
                 </form>
             </div>   
         </section> <!-- /.inputs-container -->
-        <section class="output-choices-container">
+        <section class="wrapper">
+            <h3 class="makeHero">Make this hero your hero</h3>
             <div class="finalChoices">
-                <ul>
+                <ul class="finalList">
                     <li class="finalFont"></li>
                     <!-- leave space between li so that the 'user results'are blank upon page load -->
                     <li class="finalTextColour"> </li>
@@ -110,8 +118,6 @@
                 </ul>
             </div>
         </section>
-    </main>
-
     <footer class="wrapper">
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
