@@ -8,6 +8,7 @@
     width: 100%;
 
     & .backgroundContainer {
+        background-image: url('../images/flamingo.jpg');
         margin: 0 auto;
         width: 60%;
         text-align: center;
@@ -22,12 +23,12 @@
         top: 10%;
         left: 20%;
         @include fontSize(21);
-
-
-
+        font-family: 'Bowlby One', cursive;
+        color: white;
 
         & .userHeader {
             padding-top: 25%;
+
             @media (max-width: 1000px) {
                 padding-top: 25%;
             }
@@ -38,9 +39,6 @@
                 font-size: 5vw;
             }
         }
-
-        // 1190 to 100
-
         @media (max-width: 1190px) {
             width: 70%;
             left: 15%;
@@ -61,56 +59,36 @@
             height: 90%;
         
         }
-        // @media (max-width: 1050px) {
-        //     height: 420px;
-        //     line-height: 420px;
-        //     @include fontSize(25);
-        // }
-
-        // @media(max-width: 890px) {
-        //     // left: 75px;
-        //     height: 350px;
-        //     line-height: 350px;
-        //     @include fontSize(20);
-        // }
-
-            // @media (max-width: 680px) {
-            //     height: 280px;
-            //     // left: 50px;
-            //     line-height: 280px;
-            // }
-
-            // @media (max-width: 550px) {
-            //     height: 250px;
-            //     top: 0;
-            //     line-height: 250px;
-            // }
-
-            // @media (max-width: 430px) {
-            //    left: 0;
-            //    line-height: 200px;
-            //     height: 80%;
-            //     width: 100%;
-            // }
     }
-
-
-
-
 }
-// .device-bg-container {
-//     position: relative;
-//     .deviceBackground {
-//         position: absolute;
-//         top: 0;
-//         z-index: -1;
-        // width: 80%;
-        // height: 80vh;
-        // margin: 0 auto;
-        // background-size: cover;
-        /* background-image: url(../images/leaf.jpeg); */
-//         background-position: center center;
-//         background-size: cover;
-//     }
-// }
 
+.finalChoices {
+    ul {
+        width: 50%;
+        margin: 0 auto;
+        list-style-type: none;
+        margin-bottom: 50px;
+        font-family: 'Courier New', Courier, monospace;
+        color: white;
+        @include fontSize(16);
+        font-weight: lighter;
+
+        li {
+            line-height: 1.6;
+        }
+        a {
+            color: white;
+        }
+    }
+}
+
+.makeHero {
+    text-align: center;
+    font-family: $mainType;
+    text-transform: uppercase;
+    font-weight: lighter;
+    letter-spacing: 2px;
+    @include fontSize(14);
+    border-bottom: 1px solid white;
+    padding-bottom: 10px;
+}

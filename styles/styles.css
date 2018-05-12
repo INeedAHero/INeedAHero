@@ -287,6 +287,7 @@ p {
   background-position: center center;
   width: 100%; }
   .chosenDevice .backgroundContainer {
+    background-image: url("../images/flamingo.jpg");
     margin: 0 auto;
     width: 60%;
     text-align: center;
@@ -298,7 +299,9 @@ p {
     top: 10%;
     left: 20%;
     font-size: 21px;
-    font-size: 2.1rem; }
+    font-size: 2.1rem;
+    font-family: 'Bowlby One', cursive;
+    color: white; }
     .chosenDevice .backgroundContainer .userHeader {
       padding-top: 25%; }
       @media (max-width: 1000px) {
@@ -327,26 +330,70 @@ p {
       .chosenDevice .backgroundContainer {
         height: 90%; } }
 
-/* background-image: url(../images/leaf.jpeg); */
+.finalChoices ul {
+  width: 50%;
+  margin: 0 auto;
+  list-style-type: none;
+  margin-bottom: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  color: white;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: lighter; }
+  .finalChoices ul li {
+    line-height: 1.6; }
+  .finalChoices ul a {
+    color: white; }
+
+.makeHero {
+  text-align: center;
+  font-family: "Arimo", sans-serif;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-size: 1.4rem;
+  border-bottom: 1px solid white;
+  padding-bottom: 10px; }
+
 select {
   text-align: center;
   text-transform: uppercase;
   height: 39px;
   width: 100px;
+  letter-spacing: 2px;
   border: 1px solid black;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url("../images/down-arrow.png") no-repeat;
   background-size: 7%;
   background-position-x: 95%;
-  background-position-y: 50%; }
+  background-position-y: 50%;
+  border-radius: 0; }
 
 .chooseDevice {
-  text-align: center; }
+  text-align: center;
+  position: relative;
+  top: 15px; }
   .chooseDevice select {
-    margin: 15px 0; }
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 250px;
+    background-size: 10%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 10px 30px; }
+    @media (max-width: 690px) {
+      .chooseDevice select {
+        position: relative; } }
 
 .inputs-container {
+  position: relative;
+  bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -360,7 +407,6 @@ select {
   .inputs-container .font-family-container,
   .inputs-container .user-text-container,
   .inputs-container .background-input {
-    margin-top: 15px;
     width: 22%;
     min-width: 200px;
     text-align: center; }
@@ -381,7 +427,8 @@ select {
       padding: 10px 30px;
       font-size: 14px;
       font-size: 1.4rem;
-      margin: 10px 0; }
+      margin: 6px 0;
+      font-size: 1.3rem; }
     .inputs-container .colour-form-container input,
     .inputs-container .colour-form-container button,
     .inputs-container .font-family-container input,
@@ -419,6 +466,26 @@ select {
       .inputs-container .background-input button.colour-btn {
         padding: 0;
         height: 40px; }
+    .inputs-container .colour-form-container button,
+    .inputs-container .colour-form-container input[type=submit],
+    .inputs-container .font-family-container button,
+    .inputs-container .font-family-container input[type=submit],
+    .inputs-container .user-text-container button,
+    .inputs-container .user-text-container input[type=submit],
+    .inputs-container .background-input button,
+    .inputs-container .background-input input[type=submit] {
+      border: 1px solid white; }
+      .inputs-container .colour-form-container button:hover,
+      .inputs-container .colour-form-container input[type=submit]:hover,
+      .inputs-container .font-family-container button:hover,
+      .inputs-container .font-family-container input[type=submit]:hover,
+      .inputs-container .user-text-container button:hover,
+      .inputs-container .user-text-container input[type=submit]:hover,
+      .inputs-container .background-input button:hover,
+      .inputs-container .background-input input[type=submit]:hover {
+        background: #e9e45f;
+        border: 1px solid white;
+        color: white; }
     .inputs-container .colour-form-container .headerInput,
     .inputs-container .font-family-container .headerInput,
     .inputs-container .user-text-container .headerInput,
@@ -452,4 +519,5 @@ body {
     max-width: 100%; }
 
 main {
-  padding-top: 100px; }
+  padding-top: 100px;
+  height: 100vh; }
