@@ -1,6 +1,5 @@
 .chosenDevice {
     margin: 0 auto;
-    // width: 100%;
     position: relative;
     text-align: center;
     background-image: url('');
@@ -12,21 +11,19 @@
         margin: 0 auto;
         width: 60%;
         text-align: center;
-        // line-height: 520px;
-        // border: 1px solid red;
         z-index: -1;
         background-size: cover;
         background-position: center center;
         height: 520px;
         position: absolute;
-        // border: 1px solid red;
         top: 10%;
         left: 20%;
         @include fontSize(21);
         font-family: 'Bowlby One', cursive;
         color: white;
-
+        
         & .userHeader {
+            text-shadow: 0 0 10em #666, 0 0 0.5em #666;
             padding-top: 25%;
 
             @media (max-width: 1000px) {
@@ -62,10 +59,30 @@
     }
 }
 
+.copyHero {
+    text-align: center;
+    .makeHero {
+        text-align: center;
+        font-family: $mainType;
+        text-transform: uppercase;
+        font-weight: lighter;
+        letter-spacing: 2px;
+        margin-bottom: 0;
+        @include fontSize(14);
+    }
+    img.arrow-down {
+        width: 20px;
+    }
+    .divider {
+        width: 100%;
+        border-bottom: 1px solid white;
+    }
+}
 .finalChoices {
     ul {
         width: 50%;
         margin: 0 auto;
+        padding: 0;
         list-style-type: none;
         margin-bottom: 50px;
         font-family: 'Courier New', Courier, monospace;
@@ -75,20 +92,10 @@
 
         li {
             line-height: 1.6;
+            text-align: center;
         }
         a {
             color: white;
         }
     }
-}
-
-.makeHero {
-    text-align: center;
-    font-family: $mainType;
-    text-transform: uppercase;
-    font-weight: lighter;
-    letter-spacing: 2px;
-    @include fontSize(14);
-    border-bottom: 1px solid white;
-    padding-bottom: 10px;
 }

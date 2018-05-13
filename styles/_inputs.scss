@@ -11,7 +11,13 @@ select {
     background-size: 7%;
     background-position-x: 95%;
     background-position-y: 50%;
-    border-radius: 0;   
+    border-radius: 0; 
+    option {
+        text-transform: uppercase;
+        margin: 20px;
+        border-radius: 0;
+        
+    }  
 }
 
 .chooseDevice {
@@ -49,6 +55,10 @@ select {
         width: 22%;
         min-width: 200px;
         text-align: center;
+        @media (max-width: 400px) {
+
+                width: 100%;
+        }
         select,
         input,
         button {
@@ -76,13 +86,15 @@ select {
             &.colour-btn {
                 padding: 0;
                 height: 40px;
-            }              
+            }   
+            &.headerInput {
+                height: 39px;
+            }           
 
         }
         button, 
         input[type=submit] {
-            // background:$yellow;
-            border: 1px solid white;
+                border: 1px solid white;
             &:hover {
                 background: $yellow;
                 border: 1px solid white;
