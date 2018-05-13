@@ -34,7 +34,9 @@
         }
 
         @media (max-width: 350px) {
-            top: 5vh;
+            position: relative;
+            top: 0;
+            order: 1;
         }
 
         h1 {
@@ -62,6 +64,7 @@
 
 .headerImage {
     position: relative;
+    order: 2;
     img {
         position: relative;
         z-index: -1;
@@ -75,6 +78,7 @@
     width: 65%;
     margin: 0 auto;
     @include fontSize(16);
+    order: 3;
 
     & .siteLink {
         text-decoration: underline;
