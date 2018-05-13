@@ -84,11 +84,15 @@
         margin: 0 auto;
         padding: 0;
         list-style-type: none;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         font-family: 'Courier New', Courier, monospace;
         color: white;
         @include fontSize(16);
         font-weight: lighter;
+
+        & .finalFont {
+            margin-top: 30px;
+        }
 
         li {
             line-height: 1.6;
