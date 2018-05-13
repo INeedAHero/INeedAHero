@@ -333,12 +333,14 @@ html {
   margin: 0 auto;
   padding: 0;
   list-style-type: none;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   font-family: 'Courier New', Courier, monospace;
   color: white;
   font-size: 16px;
   font-size: 1.6rem;
   font-weight: lighter; }
+  .finalChoices ul .finalFont {
+    margin-top: 30px; }
   .finalChoices ul li {
     line-height: 1.6;
     text-align: center; }
