@@ -26,16 +26,16 @@
                 <h1 class="heroText text-shadow-pop-br">I need a Hero</h1>
             </div>
             <div class="projectIntro">
-                <p>By cycling through high quality images from <a target="_blank" class="siteLink" href="https://pixabay.com/">Pixabay</a>, as well as a wide range of fonts from <a class="siteLink" target="_blank" href="https://fonts.google.com/">Google Fonts</a>, we are hoping you will find the perfect combo to compliment your website!</p>
+                <p>By cycling through high quality images from <a target="_blank" class="siteLink" href="https://pixabay.com/">Pixabay</a>, as well as a wide range of fonts from <a class="siteLink" target="_blank" href="https://fonts.google.com/">Google Fonts</a>, we are hoping you will find the perfect combo to complement your website!</p>
                 
                     <div class="getStarted">
-                        <a class="smoothScroll" href="#get-hero">Get Started</a>
+                        <a href="#get-hero">Get Started</a>
                     </div>
             </div>
         </div>
     </header>
-    <section class="get-hero wrapper">
-        <form class="chooseDevice" action="" id="get-hero">
+    <section class="get-hero wrapper" id="get-hero">
+        <form class="chooseDevice" action="" >
             <select name="device" id="deviceChoice">
                 <option value="">Choose your device</option>
                 <option value="desktop">Desktop</option>
@@ -57,7 +57,7 @@
     <section class="inputs-container wrapper">
             <!-- choose a colour for the header -->
             <div class="colour-form-container">
-                <p>Choose Your Font Colour</p>
+                <h3>Choose Your Font Colour</h3>
                 <form class="colourForm" action="">
                     <input type="color" class="colour-btn">
                     <input class="submitColourForm" type="submit" value="Select Colour">
@@ -66,7 +66,7 @@
         
             <!-- choose a font style -->
             <div class="font-family-container">
-                <p>Choose Your Font-Family</p>
+                <h3>Choose Your Font-Family</h3>
                 <form class="chooseFontStyle" action="">
                     <select name="font" id="fontChoice">
                         <option value="">Font-Family</option>
@@ -80,17 +80,16 @@
                 <button class="shuffleFont">Shuffle Font</button>
             </div>
             <div class="user-text-container">
-                <p>Input Some Hero Text</p>                
+                <h3>Input Some Hero Text</h3>                
                 <form class="userText" action="">
                     <input class="headerInput" type="text" placeholder="Your header here">
                 <form class="userText" action="">
-                    <!-- <input type="text" placeholder="Your header text"> -->
                     <input type="submit" value="change header">
                 </form>
             </div>
             <!-- carolines form -->
             <div class="background-input">
-                <p>Pick Your Background Category</p>
+                <h3>Pick Your Image Theme</h3>
                 <form action="">
 
                     <select name="pixabayTags" id="pixabayTags">
@@ -106,10 +105,16 @@
                 </form>
             </div>   
         </section> <!-- /.inputs-container -->
-        <section class="wrapper">
-            <h3 class="makeHero">Make this hero your hero</h3>
+        <section class="copyHero wrapper">
+            <div class="makeHeroContainer">
+                <h3 class="makeHero">Make this hero your hero</h3>
+                <a href="#finalList">
+                    <img  src="images/down-arrow.png" class="arrow-down" alt="Down-arrow">
+                </a>
+                <div class="divider"></div>
+            </div>
             <div class="finalChoices">
-                <ul class="finalList">
+                <ul class="finalList" id="finalList">
                     <li class="finalFont"></li>
                     <!-- leave space between li so that the 'user results'are blank upon page load -->
                     <li class="finalTextColour"> </li>
@@ -118,7 +123,8 @@
                 </ul>
             </div>
         </section>
-    <footer class="wrapper">
+    <footer>
+        <h5>Made using the Google Fonts and Pixabay API - &copy; <a class="siteLink" href="http://haleybowes.com/" target="_blank">Haley Bowes</a> and <a href="http://www.carolinepisano.com" target="_blank">Caroline Pisano</a>, 2018</h5>
     </footer>
     <script src='https://code.jquery.com/jquery-3.2.1.min.js' integrity='sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4='
         crossorigin='anonymous'></script>

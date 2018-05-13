@@ -24,12 +24,8 @@ app.getHero = function (search) { //function to pull from API
         e.preventDefault();
         const randomImage = Math.floor(Math.random() * res.hits.length);
         const userImage = res.hits[randomImage].largeImageURL;
-        console.log(userImage);
-
-        // $('.heroArt').css('background-image', 'url(' + userImage + ')');
 
         $('.backgroundContainer').css('background-image', 'url(' + userImage + ')');
-        // $('.chosenBackground').attr('src', userImage);
 
         $('.finalBackgroundImage').html(`<a target="_blank" href=${userImage}>See background image</a>`)
 
@@ -38,6 +34,7 @@ app.getHero = function (search) { //function to pull from API
 }
 
 // carolines's code end
+const fontCategory = [];
 app.getFont = function (font) {
   $.ajax({
     url: 'https://www.googleapis.com/webfonts/v1/webfonts?key=AIzaSyBU2zC417qkzNXlBPN23A2xRQO4MOD41lI',
@@ -45,7 +42,6 @@ app.getFont = function (font) {
   })
 
     .then((res) => {
-      const fontCategory = [];
 
       for (let i = 0; i < res.items.length; i++) {
         if (res.items[i].category == font) {
@@ -85,28 +81,13 @@ app.events = function () {
   $('#fontChoice').on('change', function () {
     const selectedFont = $(this).val();
     app.getFont(selectedFont);
-    console.log('changed the tag');
   })
 
   // change the device image based on user selection
   $('#deviceChoice').on('change', function () {
     const selectedDevice = $(this).val();
 
-  //   console.log(selectedDevice);
-  //   if (selectedDevice === "mobile") {
-  //     console.log("I chose the mobile device.");
-  //     $(".chosenDevice").css("background-image", "url(images/iphone-mockup.png)");
-  //   } else if (selectedDevice === "tablet") {
-  //     $(".chosenDevice").css("background-image", "url(images/ipad-mockup.png)");
-  //   } else if (selectedDevice === "desktop") {
-  //     $(".chosenDevice").css("background-image", "url(images/macbook-mockup.png)");
-  //   }
-
-  // })
-
-  console.log(selectedDevice);
   if (selectedDevice === "mobile") {
-    console.log("I chose the mobile device.");
     $(".deviceChosen").attr("src", "images/iphone-mockup.png");
   } else if (selectedDevice === "tablet") {
     $(".deviceChosen").attr("src", "images/ipad-mockup.png");
@@ -134,11 +115,14 @@ $(function () {
   app.init();
 
   //add smoothscroll to app
-  $('a').on('click', function(e){
-        e.preventDefault();
-        $("html").animate({ scrollTop: $("#get-hero").offset().top }, "slow");
+  $('a[href^="#get-hero"]').on("click", function(e) {
+    e.preventDefault();
+    $("html").animate({ scrollTop: $("#get-hero").offset().top }, "slow");
   });
-
+  $('a[href^="#finalList"]').on("click", function(e) {
+    e.preventDefault();
+    $("html").animate({ scrollTop: $("#finalList").offset().top }, "slow");
+  });  
 
   // change the header text based on the users input
   $('.userText').on('submit', function (e) {
