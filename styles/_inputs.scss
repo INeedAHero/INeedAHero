@@ -4,11 +4,11 @@ select {
     height: 39px ;
     width: 100px;
     letter-spacing: 2px;
-    border: 1px solid $deep-forest-green;
-    color: $deep-forest-green;
+    border: 1px solid black;
+    color: black;
     -webkit-appearance: none;
     -moz-appearance: none;
-    background: url('') no-repeat;
+    background: url('../images/down-arrow.png') no-repeat;
     background-size: 7%;
     background-position-x: 95%;
     background-position-y: 50%;
@@ -66,6 +66,7 @@ select {
             width: 100%;
             font-family: $mainType;
             padding: 10px 30px;
+            border-radius: 0;
             @include fontSize(14);
             margin: 6px 0;
             font-size: 1.3rem;
