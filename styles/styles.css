@@ -215,11 +215,18 @@ html {
   z-index: 1;
   width: 65%;
   margin: 0 auto;
-  font-size: 16px;
-  font-size: 1.6rem;
   -webkit-box-ordinal-group: 4;
   -ms-flex-order: 3;
   order: 3; }
+  .projectIntro p {
+    font-size: 16px;
+    font-size: 1.6rem;
+    position: relative;
+    bottom: 60px;
+    color: black; }
+    @media (max-width: 850px) {
+      .projectIntro p {
+        bottom: 30px; } }
   .projectIntro .siteLink {
     text-decoration: underline;
     -webkit-transition: all ease 0.3s;
@@ -240,7 +247,12 @@ html {
       font-family: "Arimo", sans-serif;
       -webkit-transition: all ease 0.3s;
       -o-transition: all ease 0.3s;
-      transition: all ease 0.3s; }
+      transition: all ease 0.3s;
+      position: relative;
+      bottom: 40px; }
+      @media (max-width: 850px) {
+        .projectIntro .getStarted a {
+          bottom: 20px; } }
       .projectIntro .getStarted a:hover {
         background: #e9e45f;
         border: 1px solid white; }
@@ -338,24 +350,43 @@ html {
     width: 100%;
     border-bottom: 1px solid white; }
 
-.finalChoices ul {
-  width: 50%;
-  margin: 0 auto;
-  padding: 0;
-  list-style-type: none;
-  margin-bottom: 30px;
-  font-family: 'Courier New', Courier, monospace;
-  color: white;
-  font-size: 16px;
-  font-size: 1.6rem;
-  font-weight: lighter; }
-  .finalChoices ul .finalFont {
-    margin-top: 30px; }
-  .finalChoices ul li {
-    line-height: 1.6;
-    text-align: center; }
-  .finalChoices ul a {
-    color: white; }
+.finalChoices {
+  margin-top: 25px; }
+  .finalChoices .staticList {
+    color: black;
+    display: inline; }
+  .finalChoices ul {
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    margin-bottom: 30px;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 16px;
+    font-size: 1.6rem;
+    font-weight: lighter;
+    text-align: left; }
+    @media (max-width: 970px) {
+      .finalChoices ul {
+        width: 90%; } }
+    .finalChoices ul .finalFont {
+      margin-top: 30px; }
+    .finalChoices ul li {
+      line-height: 1.4;
+      display: inline; }
+    .finalChoices ul a {
+      color: white;
+      -webkit-transition: all ease 0.3s;
+      -o-transition: all ease 0.3s;
+      transition: all ease 0.3s;
+      text-decoration: underline; }
+      .finalChoices ul a:hover {
+        color: #1b1b1b;
+        text-decoration: none; }
+
+.final {
+  margin-bottom: 15px; }
 
 select {
   text-align: center;
@@ -563,6 +594,7 @@ body {
   body p,
   body h3 {
     font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
     font-size: 1.4rem;
     font-weight: 300;
     line-height: 1.6;

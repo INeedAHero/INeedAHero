@@ -1,4 +1,3 @@
-
 .headerFlex {
     display: flex;
     flex-direction: column;
@@ -77,8 +76,17 @@
     z-index: 1;
     width: 65%;
     margin: 0 auto;
-    @include fontSize(16);
     order: 3;
+
+    p {
+        @include fontSize(16);
+        position: relative;
+        bottom: 60px;
+        color: black;
+        @media(max-width: 850px){
+            bottom: 30px;
+        }
+    }
 
     & .siteLink {
         text-decoration: underline;
@@ -98,6 +106,11 @@
             letter-spacing: 2px;
             font-family: $mainType;
             transition: all ease 0.3s;
+            position: relative;
+            bottom: 40px;
+            @media(max-width: 850px){
+                bottom: 20px;
+            }
             &:hover {
                 background:$yellow;
                 border: 1px solid white;

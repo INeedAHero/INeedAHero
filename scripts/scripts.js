@@ -1,8 +1,9 @@
 const app = {};
 
-// caroline's code start
+app.heroArray = [];
 
-app.getHero = function (search) { //function to pull from API
+app.getHero = function (search) {
+ //function to pull from API
   $.ajax({
     url: 'https://pixabay.com/api/',
     dataType: 'json',
@@ -17,19 +18,9 @@ app.getHero = function (search) { //function to pull from API
     }
   })
     .then((res) => {
-      //put object in array
-      const heroArray = res.hits;
 
-      $('.submitImage').on('click', function (e) {
-        e.preventDefault();
-        const randomImage = Math.floor(Math.random() * res.hits.length);
-        const userImage = res.hits[randomImage].largeImageURL;
+      app.heroArray = res.hits; 
 
-        $('.backgroundContainer').css('background-image', 'url(' + userImage + ')');
-
-        $('.finalBackgroundImage').html(`<a target="_blank" href=${userImage}>See background image</a>`)
-
-      })
     });
 }
 
@@ -78,10 +69,16 @@ app.getFont = function (font) {
 
 // event method to change the font based on the user selection
 app.events = function () {
+
   $('#fontChoice').on('change', function () {
     const selectedFont = $(this).val();
     app.getFont(selectedFont);
   })
+
+  // call app.hero image api 
+
+  app.getHero();
+
 
   // change the device image based on user selection
   $('#deviceChoice').on('change', function () {
@@ -96,19 +93,20 @@ app.events = function () {
   }
 })
 
-
-   
-
   // caroline's events
 
   $('#pixabayTags').on('change', function () {
     const selectedTag = $(this).val();
+    // console.log(selectedTag);
     app.getHero(selectedTag)
+   
   })
 }
 
 app.init = function () {
   app.events();
+  app.randomImage();
+
 }
 
 $(function () {
@@ -143,3 +141,19 @@ $(function () {
     $('.finalTextColour').html(colourInput);
   })
 });
+
+app.randomImage = function () {
+  $('.submitImage').on('click', function (e) {
+    e.preventDefault();
+
+    console.log(app.heroArray);
+    const randomImage = Math.floor(Math.random() * app.heroArray.length);
+    const userImage = app.heroArray[randomImage].largeImageURL;
+    
+
+    $('.backgroundContainer').css('background-image', 'url(' + userImage + ')');
+
+    $('.finalBackgroundImage').html(`<a target="_blank" href=${userImage}>See background image</a>`)
+
+  })
+}
