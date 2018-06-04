@@ -112,15 +112,14 @@ app.init = function () {
 $(function () {
   app.init();
 
-  //add smoothscroll to app
-  $('a[href^="#get-hero"]').on("click", function(e) {
-    e.preventDefault();
-    $("html").animate({ scrollTop: $("#get-hero").offset().top }, "slow");
+  //add smoothscroll to app 
+  $(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+
+    $('html, body').animate({
+      scrollTop: $($.attr(this, 'href')).offset().top
+    }, 500);
   });
-  $('a[href^="#finalList"]').on("click", function(e) {
-    e.preventDefault();
-    $("html").animate({ scrollTop: $("#finalList").offset().top }, "slow");
-  });  
 
   // change the header text based on the users input
   $('.userText').on('submit', function (e) {
