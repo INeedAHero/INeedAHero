@@ -3,7 +3,7 @@ const app = {};
 app.heroArray = [];
 
 app.getHero = function (search) {
- //function to pull from API
+  //function to pull from API
   $.ajax({
     url: 'https://pixabay.com/api/',
     dataType: 'json',
@@ -19,7 +19,7 @@ app.getHero = function (search) {
   })
     .then((res) => {
 
-      app.heroArray = res.hits; 
+      app.heroArray = res.hits;
 
     });
 }
@@ -84,14 +84,14 @@ app.events = function () {
   $('#deviceChoice').on('change', function () {
     const selectedDevice = $(this).val();
 
-  if (selectedDevice === "mobile") {
-    $(".deviceChosen").attr("src", "images/iphone-mockup.png");
-  } else if (selectedDevice === "tablet") {
-    $(".deviceChosen").attr("src", "images/ipad-mockup.png");
-  } else if (selectedDevice === "desktop") {
-    $(".deviceChosen").attr("src", "images/macbook-mockup.png");
-  }
-})
+    if (selectedDevice === "mobile") {
+      $(".deviceChosen").attr("src", "images/iphone-mockup.png");
+    } else if (selectedDevice === "tablet") {
+      $(".deviceChosen").attr("src", "images/ipad-mockup.png");
+    } else if (selectedDevice === "desktop") {
+      $(".deviceChosen").attr("src", "images/macbook-mockup.png");
+    }
+  })
 
   // caroline's events
 
@@ -99,7 +99,7 @@ app.events = function () {
     const selectedTag = $(this).val();
     // console.log(selectedTag);
     app.getHero(selectedTag)
-   
+
   })
 }
 
@@ -148,7 +148,7 @@ app.randomImage = function () {
     console.log(app.heroArray);
     const randomImage = Math.floor(Math.random() * app.heroArray.length);
     const userImage = app.heroArray[randomImage].largeImageURL;
-    
+
 
     $('.backgroundContainer').css('background-image', 'url(' + userImage + ')');
 
