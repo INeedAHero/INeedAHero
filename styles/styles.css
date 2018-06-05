@@ -173,13 +173,13 @@ html {
     @media (max-width: 650px) {
       .headerFlex .heroText {
         top: 8vh; } }
+    @media (max-width: 400px) {
+      .headerFlex .heroText {
+        top: 20vh; } }
     @media (max-width: 350px) {
       .headerFlex .heroText {
-        position: relative;
-        top: 0;
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1; } }
+        position: absolute;
+        top: 30px; } }
     .headerFlex .heroText h1 {
       font-size: 8vw;
       margin: 0;
@@ -395,6 +395,7 @@ select {
   width: 100px;
   letter-spacing: 2px;
   border: 1px solid black;
+  color: black;
   -webkit-appearance: none;
   -moz-appearance: none;
   background: url("../images/down-arrow.png") no-repeat;
@@ -467,6 +468,7 @@ select {
       width: 100%;
       font-family: "Arimo", sans-serif;
       padding: 10px 30px;
+      border-radius: 0;
       font-size: 14px;
       font-size: 1.4rem;
       margin: 6px 0;

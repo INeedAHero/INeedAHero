@@ -6,7 +6,9 @@
     @media(max-width: 750px) {
         justify-content: center;
     }
-
+    // @media(max-width: 400px) {
+    //     height: 90vh;
+    // }
     & .projectIntro {
         margin-bottom: 20px;
         width: 60%;
@@ -31,11 +33,15 @@
         @media(max-width: 650px) {
             top: 8vh;
         }
-
+        @media (max-width:400px) {
+            top: 20vh;
+        }
         @media (max-width: 350px) {
-            position: relative;
-            top: 0;
-            order: 1;
+            & {
+                position: absolute;
+                top: 30px;
+                // order: 1;
+            }
         }
 
         h1 {
